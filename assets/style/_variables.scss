@@ -1,0 +1,50 @@
+//Colores
+$color-1: #E0261A;
+$color-2: #F5CA1D;
+$color-3: #fff;
+$color-4: #9FE3D5;
+$color-5: #E8BA02;
+$color-6: #121212;
+//Distancias standar
+$ditancia-prudente-1: 25px;
+$ditancia-prudente-2: 50px;
+$ditancia-prudente-3: 100px;
+
+.bg-rojo{
+    background-color: $color-1;
+}
+.bg-amarillo{
+    background-color: $color-5;
+}
+.bg-celeste{
+    background-color: $color-4;
+}
+.bg-negro{
+    background-color: $color-6;
+}
+
+.color-blanco{
+    color: #fff;
+}
+.color-negro{
+    color: #121212;
+}
+
+.espacio-prudente{
+    padding: $ditancia-prudente-1;
+}
+
+.py-25{
+    padding: $ditancia-prudente-1 0;
+}
+.py-50{
+    padding: $ditancia-prudente-2 0;
+}
+.py-100{
+    padding: $ditancia-prudente-3 0;
+}
+
+.px-10{
+    padding-right: 10%;
+    padding-left: 10%;
+}

@@ -1,0 +1,682 @@
+//Variables
+// @import url('../style/_variables.scss');
+// @import url('../style/_texto.scss');
+
+//Colores
+$color-1: #E0261A;
+$color-2: #F5CA1D;
+$color-3: #fff;
+$color-4: #9FE3D5;
+$color-5: #E8BA02;
+$color-6: #121212;
+//Distancias standar
+$ditancia-prudente-1: 25px;
+$ditancia-prudente-2: 50px;
+$ditancia-prudente-3: 100px;
+
+.bg-rojo{
+    background-color: $color-1;
+}
+.bg-amarillo{
+    background-color: $color-5;
+}
+.bg-celeste{
+    background-color: $color-4;
+}
+.bg-negro{
+    background-color: $color-6;
+}
+
+.color-blanco{
+    color: $color-3;
+}
+.color-negro{
+    color: $color-6;
+}
+.color-rojo{
+    color: $color-1;
+}
+
+.espacio-prudente{
+    width: $ditancia-prudente-1;
+    height: $ditancia-prudente-1;
+}
+
+.py-25{
+    padding-top: $ditancia-prudente-1;
+    padding-bottom: $ditancia-prudente-1;
+}
+.py-50{
+    padding-top: $ditancia-prudente-2;
+    padding-bottom: $ditancia-prudente-2;
+}
+.py-100{
+    padding-top: $ditancia-prudente-3;
+    padding-bottom: $ditancia-prudente-3;
+}
+
+.px-10{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 800;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-size: 60px;
+}
+h2{
+    font-size: 48px;
+}
+h3{
+    font-size: 36px;
+}
+h4{
+    font-size: 18px;
+}
+h5{
+    font-size: 16px;
+}
+
+//Estilo
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: $color-1;
+    nav {
+        .logo { 
+            width: 80px;
+        }
+        .nav-link {
+            font-weight: bold;
+            color: $color-3;
+            margin-right: 20px;
+        }
+        .navbar-nav .show  .nav-link,
+        .navbar-nav .nav-link.active {
+            color: $color-3;
+            border-bottom: solid 3px $color-3;
+        }
+        .nav-link:hover {
+            color: $color-6;
+        }
+    }
+}
+.banner-productos{
+    background-color: $color-2;
+    color: $color-3;
+    padding: $ditancia-prudente-2 0;
+    img{
+        height: 200px;
+        width: 160px;
+    }
+
+}
+.banner-productos.fam{
+
+    img{
+        height: 160px;
+        width: 200px;
+    }
+
+}
+
+.catalogo-productos{
+    padding: $ditancia-prudente-2 0;
+
+    img{
+        max-width:100%;
+        max-height:100%;
+    }
+
+    // .col-3:hover{
+    //     background-color: #E0261A;
+    //   }
+    //   .col-4:hover{
+    //     background-color: #E0261A;
+    //   }
+    
+}
+.banner-recetas{
+    background-color: $color-4;
+    color: $color-3;
+    padding: $ditancia-prudente-1 0;
+    img{
+        height: 200px;
+        width: 160px;
+    }
+
+}
+.nav-icon-propio{
+    width: 30px;
+    aspect-ratio: 1 / 1;
+}
+.franga-sello-footer{
+
+    background-color: $color-6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 84px;
+        height: 79px;
+    }
+    p{
+        color: $color-3;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+.inferior-footer{
+    img{
+        height: 70px;
+        width: 70px;
+    }
+}
+footer{
+    .formulario{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        .casilla{
+            background-color: $color-3;
+            border: none;
+            padding: 7px 12px;
+            margin-bottom: 12px;
+        }
+        .submit-button{
+            width: 160px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-self: flex-end;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 800;
+            background-color: $color-6;
+            color: $color-3;
+            border: none;
+            &:hover{
+                background-color: $color-3;
+                color: $color-6;
+            }
+        }
+    }
+}
+
+.nav-tabs{ //tabs en productos
+
+    border-bottom: $color-1 3px solid;
+    .nav-link{
+        color: $color-6;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+        border-radius: 0;
+        margin: 0px;
+        :hover{
+            color: $color-1;
+            border-top: 3px $color-1 solid;
+            border-right: 3px $color-1   solid;
+            border: none;
+            border-left: none;
+            margin: 0px;
+        }
+    }
+    .nav-link.active{
+        border-top: 3px $color-1 solid;
+        border-right: 3px $color-1 solid;
+        border-left: 3px $color-1 solid;
+        border-bottom: none;
+
+        border-radius: 0;
+        color: $color-1;
+
+    }
+}
+.paginador{
+    display: block;
+    border: 3px $color-1 solid;
+    width: 65px;
+    height: 65px;
+    color: $color-1;
+    background-color: $color-3;
+    text-align: center;
+    &:hover{
+        h2{
+            color: $color-3;
+        }
+        
+        background-color: $color-1;
+    }
+}
+.paginador-flecha{
+    width: 0; 
+    height: 0; 
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    
+    border-left: 40px solid $color-1;
+  }
+//Contacto
+.contacto {
+    padding: $ditancia-prudente-3;
+    h2 {
+        color: $color-1;
+        font-size: 30px;
+    }
+    .sucursal {
+        max-width: 100%;
+        padding-bottom: 15px;
+    }
+    p {
+        color: $color-6;
+        span {
+            color: $color-1;
+            font-weight: bold;
+        }
+    }
+    form {
+        padding-top: 60px;
+        label {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .form-control {
+            padding: 10px 3px;
+            border-radius: 0%;
+            padding-left: 16px;
+            background-color: #D9D9D9;
+        }
+        textarea {
+            height: 170px;
+            background-color: #D9D9D9;
+        }
+        .btn {
+            background-color: $color-3;
+            border: solid 3px $color-1;
+            color: $color-1;
+            font-weight: bold;
+            border-radius: 0%;
+            padding: 12px 40px;
+            &:hover {
+                background-color: $color-1;
+                color: $color-3;
+            }
+        }
+    }
+}
+.mapa {
+    iframe {
+        width: 100%;
+        height: 400px;
+        padding-bottom: $ditancia-prudente-1;
+    }
+}
+// Hover Img
+.container-img {
+    width: 100%;
+    position: relative;
+    height: auto;
+ 
+   &:hover .overlay{
+       opacity: 1;
+   }
+}
+
+.container-img-fit{
+    aspect-ratio: 1 / 1;
+    position: relative;
+    &:hover .overlay{
+        opacity: 1;
+    }
+
+}
+ 
+.img-home{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left:0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-image: url(../img/otros/fondo-rojo.png);
+    color: $color-3;
+}
+.image-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+ 
+    img{
+        width: 48px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Inicio
+.slider {
+    .bg {
+        height: 620px;
+    }
+    .bresler-inicio {
+        width: 400px;
+        padding-bottom: 190px;
+    }
+    img {   
+        width: 100%;
+    }
+    video {
+        width: 100%;
+        height: 620px;
+    }
+    h5 {
+        padding-bottom: 200px;
+        font-size: 60px;
+    }
+    a {
+        width: 100%;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-3;
+        border: solid 4px $color-3;
+        padding: 5px;
+        &:hover {
+            background-color: $color-1};
+            color: $color-3;
+        }
+    }
+}
+.popular {
+    padding-top: $ditancia-prudente-3;
+    padding-bottom: $ditancia-prudente-3;
+    img{
+        height: 200px;
+        width: 160px;
+        display:block;
+    }
+    h3 {
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+.ofertas {
+    background-color: $color-2;
+    img {
+        width: 100%;
+        margin-left: 10px;
+    }
+    h2 {
+        padding-top: 100px;
+        font-size: 2.25rem;
+        color: $color-3;
+        text-align: center;
+    }
+    .col-md-6 {
+        background-color: #CD002A;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.ofertas-2 {
+    background-color: $color-4;
+    img {
+        width: 100%;
+        margin-left: 10px;
+    }
+    h2 {
+        padding-top: 100px;
+        font-size: 2.25rem;
+        color: $color-3;
+        text-align: center;
+    }
+    .col-md-6 {
+        background-color: #CD002A;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.pad-bott-50{
+    padding-bottom: $ditancia-prudente-2;
+}
+.video-receta{
+    
+    iframe{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+//Sobre Nosotros
+.historia {
+    padding-top: $ditancia-prudente-2;
+    padding-bottom: $ditancia-prudente-2;
+    h2 {
+        color: $color-1;
+        font-size: 30px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+.bg-yellow {
+    background-color: $color-5;
+    .row {
+        padding-top: $ditancia-prudente-2;
+        padding-bottom: $ditancia-prudente-2;
+    } 
+    h2 {
+        font-size: 30px;
+    }
+    font-size: 16px;
+}
+.bg-red {
+    background-color: $color-1;
+    color: $color-3;
+    .row {
+        padding-top: $ditancia-prudente-2;
+        padding-bottom: $ditancia-prudente-2;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    img {
+        width: 100%;
+        height: 350px;
+    }
+}
+.bg-blue{
+    background-color: $color-4;
+    .row {
+        padding-top: $ditancia-prudente-2;
+        padding-bottom: $ditancia-prudente-2;
+    } 
+    h2 {
+        font-size: 30px;
+    }
+    img {
+        height: 270px;
+    }
+}
+.contactanos {
+    padding-top: $ditancia-prudente-2;
+    padding-bottom: $ditancia-prudente-1;
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    a {
+        text-decoration: none;
+        border: solid 3px $color-1;
+        padding: 10px;
+        color: $color-1;
+        font-weight: bold;
+        font-size: 30px;
+        margin-left: 135px;
+        &:hover {
+            background-color: $color-1;
+            color: $color-3;
+        }
+    }
+}
+.padding-0{
+    padding: 0px !important;
+}
+//Media Screen
+@media screen and (max-width: 992px) {
+    .ofertas {
+        img {
+            width: 100%;
+            margin-left: 10px;
+        }
+        h2 {
+            padding-top: 20px;
+        }
+    }
+    .ofertas-2 {
+        img {
+            width: 100%;
+            margin-left: 10px;
+        }
+        h2 {
+            padding-top: 50px;
+        }
+    }
+    .bg-yellow {
+        h2 {
+            padding-top: 30px;
+        }
+    }
+    .bg-red {
+        img {
+            padding-top: 20px;
+        }
+    }
+    .bg-blue {
+        p {
+            padding-top: 30px;
+        }
+    }
+    .display-hide-sm{
+        display: none;
+        img{
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+     .ofertas {
+        h2 {
+            font-size: 30px;
+          margin-left: 170px;
+            margin-top: 100px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.773);
+            padding: 0;
+        }
+     
+     }
+     .ofertas-2 {
+        h2 {
+            font-size: 30px;
+            margin-left: 170px;
+            margin-top: -230px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.773);
+            padding: 0;
+        }
+     }
+}
+@media screen and (max-width: 650px) {
+    .ofertas {
+       h2 {
+           font-size: 28px;
+         margin-left: 120px;
+           margin-top: 70px;
+       }
+    
+    }
+    .ofertas-2 {
+       h2 {
+           font-size: 28px;
+           margin-left: 120px;
+           margin-top: -150px;
+       }
+    }
+}
+@media screen and (max-width: 576px) {
+    .ofertas {
+       h2 {
+           font-size: 28px;
+         margin-left: 90px;
+           margin-top: 70px;
+       }
+    
+    }
+    .ofertas-2 {
+       h2 {
+           font-size: 28px;
+           margin-left: 100px;
+           margin-top: -150px;
+       }
+    }
+}
+@media screen and (max-width: 476px) {
+    .ofertas {
+       h2 {
+           font-size: 28px;
+         margin-left: 30px;
+           margin-top: 100x;
+       }
+    
+    }
+    .ofertas-2 {
+       h2 {
+           font-size: 28px;
+           margin-left: 40px;
+           margin-top: -120px;
+       }
+    }
+}
+
+
